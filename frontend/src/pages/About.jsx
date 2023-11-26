@@ -2,7 +2,7 @@ import React from 'react'
 import photoProfile from '../assets/profiles/aizen.jpg'
 import Ourteam from '../assets/images/portrait-business-partners-greeting-one-another-by-handshaking-way-office.jpg'
 // import teamWorkPhoto from '../assets/images/group-people-working-out-business-plan-office.jpg'
-
+import {motion as m} from 'framer-motion'
 const About = () => {
 
     const Cards = [
@@ -45,7 +45,8 @@ const About = () => {
         //         </div>
         //     </div>
         // </div>
-        <div className='w-full relative px-[24rem] py-10'>
+        <m.div exit={{ x:"-100vw"  , position:'fixed'  , transitionDuration:3 }} 
+         className='w-full relative px-[24rem] py-10'>
             <div className='w-full px-8 flex justify-evenly items-center gap-20 pb-10'>
                 <div className='w-[860px] h-[13rem]'>
                     <div className='w-full'>Home / About us</div>
@@ -134,7 +135,7 @@ const About = () => {
             {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path fill="#0099ff" fill-opacity="0.5" d="M0,256L30,229.3C60,203,120,149,180,128C240,107,300,117,360,138.7C420,160,480,192,540,176C600,160,660,96,720,106.7C780,117,840,203,900,208C960,213,1020,139,1080,122.7C1140,107,1200,149,1260,149.3C1320,149,1380,107,1410,85.3L1440,64L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path>
             </svg> */}
-        </div >
+        </m.div >
     )
 }
 

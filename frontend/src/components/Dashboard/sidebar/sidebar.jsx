@@ -21,6 +21,7 @@ function Sidebar () {
     const [ isExpanded, setIsExpanded ] = useState( true );
 
     const handleLinkClick = ( link ) => {
+        //!!!!! ????? setActiveLink(link) ?????? wtf
         setActiveLink( ( prevActiveLink ) =>
             prevActiveLink === link ? prevActiveLink : link
         );
@@ -30,22 +31,22 @@ function Sidebar () {
         {
             name: 'Profile',
             icon: <RxDashboard size={ 30 } />,
-            link: '/Profile',
+            link: 'Profile',
         },
         {
             name: 'Users',
             icon: <AiOutlineUser size={ 30 } />,
-            link: '/Users',
+            link: 'Users',
         },
         {
             name: 'Activity',
             icon: <LuClock3 size={ 30 } />,
-            link: '/Activity',
+            link: 'Activity',
         },
         {
             name: 'Analytics',
             icon: <TbBrandGoogleAnalytics size={ 30 } />,
-            link: '/Analytics',
+            link: 'Analytics',
         },
         // Add more links as needed
     ];

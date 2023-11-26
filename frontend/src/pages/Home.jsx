@@ -1,9 +1,12 @@
 import React from 'react'
-
+import Patient from '../components/Patient/Patient'
 
 const Home = () => {
     return (
-        <div></div>
+        <div>
+            <Patient/>
+
+        </div>
     )
 }
 

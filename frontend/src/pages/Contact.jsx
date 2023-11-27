@@ -1,8 +1,8 @@
 import React from 'react'
-
+import {motion as m} from 'framer-motion'
 const Contact = () => {
     return (
-        <div class="flex h-full flex-col justify-center items-center px-6 py-12 lg:px-8">
+        <m.div exit={{opacity:0}} class="flex h-full flex-col justify-center items-center px-6 py-12 lg:px-8">
             <form class="w-full max-w-lg">
                 <div class="flex flex-wrap -mx-3 mb-6">
                     <div class="w-full px-3">
@@ -37,7 +37,7 @@ const Contact = () => {
                     <div class="md:w-2/3"></div>
                 </div>
             </form>
-        </div >
+        </m.div >
     )
 }
 

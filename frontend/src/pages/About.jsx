@@ -45,8 +45,8 @@ const About = () => {
         //         </div>
         //     </div>
         // </div>
-        <m.div exit={{ x:"-100vw"  , position:'fixed'  , transitionDuration:3 }} 
-         className='w-full relative px-[24rem] py-10'>
+        <m.div exit={{ x:"-100vw"  }} 
+         className='w-full  relative px-[24rem] py-10'>
             <div className='w-full px-8 flex justify-evenly items-center gap-20 pb-10'>
                 <div className='w-[860px] h-[13rem]'>
                     <div className='w-full'>Home / About us</div>

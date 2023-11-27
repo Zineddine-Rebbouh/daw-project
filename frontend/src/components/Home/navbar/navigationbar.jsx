@@ -5,6 +5,8 @@ import { IoHomeOutline } from "react-icons/io5";
 import { FcAbout } from "react-icons/fc";
 import { RiContactsLine } from "react-icons/ri";
 
+import {motion as m } from 'framer-motion' 
+
 const NavigationBar = () => {
     const [ close, setClose ] = useState( false );
     const [ isOpen, setOpen ] = useState( false );
@@ -17,6 +19,7 @@ const NavigationBar = () => {
     const handleLinkClick = ( link ) => {
         //!!!!!! setActiveLink( ( prevActiveLink ) => ( prevActiveLink === link ? prevActiveLink : link ) );
         setActiveLink(link);
+        setOpen(false)
     };
 
     const navLinks = [
@@ -39,7 +42,7 @@ const NavigationBar = () => {
 
     // console.log( isOpen );
     return (
-        <div className='border-b-2 border-gray px-20'>
+        <div className='border-b-2 border-gray px-20'> 
             <nav className="relative px-4 py-4 flex justify-between items-center bg-gray-50">
                 <Link className="text-3xl font-bold leading-none" to="#">
                     <svg className="h-10" alt="logo" viewBox="0 0 10240 10240">
@@ -81,7 +84,7 @@ const NavigationBar = () => {
             </nav>
             {
                 isOpen && (
-                    <div class="lg:hidden navbar-menu relative z-50 ">
+                    <m.div exit={{x:-100 , transitionDuration:3}} class="lg:hidden navbar-menu relative z-50 ">
                         <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
                         <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
                             <div class="flex items-center mb-8">
@@ -125,7 +128,7 @@ const NavigationBar = () => {
                                 </div>
                             </div>
                         </nav>
-                    </div>
+                    </m.div>
                 )
             }
         </div>

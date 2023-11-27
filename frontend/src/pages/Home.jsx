@@ -42,14 +42,17 @@ const Home = () => {
           Video games addiction
         </m.h1>
 
-        <m.img drag dragConstraints={{top:0 ,left:0  , right:0 , bottom:0}}  dragElastic={1}
+        <m.img
+         drag dragConstraints={{top:0 ,left:0  , right:0 , bottom:0}}  dragElastic={1}
+
           src="src\assets\images\—Pngtree—vector illustration of play video_6603689.png"
           alt="video games addiction"
           width={350}
           className="mb-4"
-          animate={{ opacity: 1 }}
-          initial={{ opacity: 0 }}
-          transition={{ delay: 0.5 }}
+          animate={{ opacity: 1 , y:0  ,transition:{ delay: 0.5 ,type:'spring' ,stiffness:120}}}
+          initial={{ opacity: 0  , y:-500}}
+          
+          whileTap={{rotate:4}}
         />
         <m.button 
           initial={{ opacity: 0 }}
@@ -132,12 +135,12 @@ const Home = () => {
       </m.div>
 
       {toggleScrollTop && (
-        <button
+        <m.button
           className=" fixed bottom-4  right-4 rotate-180 bg-[#00df9a] p-1  rounded-full text-[#06193B]"
-          onClick={ScrollTop}
+          onClick={ScrollTop} 
         >
           <FaAngleDoubleDown size={40} />
-        </button>
+        </m.button>
       )}
     </m.div>
   );

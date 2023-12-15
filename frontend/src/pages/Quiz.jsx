@@ -3,7 +3,7 @@ import './Quiz.css'
 import {motion as m} from 'framer-motion'
 export default function Quiz() {
 	const questions = [
-		/*{
+		{
 			questionText: ' Genre : ',
 			answerOptions: [
 				{ answerText: 'Masculin'},
@@ -48,7 +48,7 @@ export default function Quiz() {
 				{ answerText: 'Sans emploi'},
 				{ answerText: 'Retraité(e)'},
 			],
-		},*/
+		},
 		{
 			questionText: "À quelle fréquence jouez-vous aux jeux vidéo ?",
 			answerOptions: [
@@ -335,7 +335,7 @@ export default function Quiz() {
 	return (
     <m.div exit={{x:'100vw'}} className='parent  p-8'>
 
-		<div className='app'>
+		<div className='app flex-wrap lg:flex-nowrap'>
 			{showScore ? (
 				<div className='score-section' >
 					<div class="loader"></div>

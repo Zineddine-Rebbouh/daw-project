@@ -6,7 +6,7 @@ const Home = () => {
   useEffect(() => {
     function handleScroll() {
       setToggleScrollTop(window.scrollY > 400);
-      console.log(toggleScrollTop);
+      
     }
     window.addEventListener("scroll", handleScroll);
 

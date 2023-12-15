@@ -43,7 +43,7 @@ const OverviewView = () => {
         },
     ]
     return (
-        <div className='flex items-center gap-3 w-full h-90 bg-white px-4 pt-14  pb-7 rounded-lg'>
+        <div className='flex flex-wrap items-center gap-3 w-full h-90 bg-white px-4 pt-14  pb-7 rounded-lg'>
             {
                 Cards.map( ( card, index ) => (
                     <div key={ card.name } className='flex flex-1 border-1 border-gray-500  rounded-lg'>

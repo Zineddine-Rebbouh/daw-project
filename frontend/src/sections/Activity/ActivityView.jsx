@@ -3,7 +3,8 @@ import React from 'react'
 const ActivityView = () => {
     return (
         <div>
-            activity
+            <h1 className='text-xl font-bold '>Activity</h1>
+            
         </div>
     )
 }

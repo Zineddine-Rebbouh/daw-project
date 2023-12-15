@@ -4,6 +4,7 @@ import { FaUnlock } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa6";
 import { Link } from "lucide-react";
 
+
 const login = () => {
   const [userInput, setUserInput] = useState({
     email: "",
@@ -14,9 +15,9 @@ const login = () => {
   };
   const handleSingIn = async () => {
     // send post request to the server
-    const response = await fetch("api", {
-      method: "Post .....................",
-    });
+    // const response = await fetch("api", {
+    //   method: "Post .....................",
+    // });
     // if response is ok then !!!!!!!!!!!!!!!
     // else error
   };
@@ -113,6 +114,7 @@ const login = () => {
           </div>
         </form>
       </div>
+      
     </div>
   );
 };
